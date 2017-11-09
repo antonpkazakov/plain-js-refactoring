@@ -29,7 +29,5 @@ function initWishlist20() {
 }
 
 export default function initWishlist() {
-    $(() => {
-        initOnDocumentReady();
-    })
+    $(initOnDocumentReady);
 }

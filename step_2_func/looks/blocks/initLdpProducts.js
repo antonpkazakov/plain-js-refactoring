@@ -94,12 +94,8 @@ function removeProductImagesLoaders() {
 export default function initLdpProducts() {
     initProductSimplesSelectOnHotspots();
 
-    $(() => {
-        initOnDocumentReady();
-    });
+    $(initOnDocumentReady);
 
     // Remove loader.gif from the grid cells when product images are loaded
-    $(window).load(() => {
-        initOnWindowLoad();
-    });
+    $(window).load(initOnWindowLoad);
 }

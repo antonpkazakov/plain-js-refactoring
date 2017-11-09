@@ -8,7 +8,7 @@ function initLookMainImagePano() {
 
 function initBottomLooksSlider() {
     const slickSlider = new SlickSlider();
-    $(function () {
+    $(() => {
         slickSlider.init();
     });
 }

@@ -1,4 +1,3 @@
-// import modules
 import ModuleSmoothScroll from './local/modules/SmoothScroll';
 import WelcomeOverlay from './block/welcomeOverlay';
 import * as ClubSignupOverlay from './block/clubSignupOverlay';
@@ -37,9 +36,7 @@ function initOverlays() {
 }
 
 export default function initCommonBlocks() {
-    $(() => {
-        initOnDocumentReady();
-    });
+    $(initOnDocumentReady);
 
     initSeo();
 }

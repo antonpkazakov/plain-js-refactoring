@@ -34,10 +34,10 @@ function initLookDetailPage() {
 export default function initLooks() {
     initCommonBlocks();
 
-    if (this.isLooksListingPage()) {
-        this.initLooksListingPage();
+    if (isLooksListingPage()) {
+        initLooksListingPage();
     }
-    if (this.isLookDetailPage()) {
-        this.initLookDetailPage();
+    if (isLookDetailPage()) {
+        initLookDetailPage();
     }
 }

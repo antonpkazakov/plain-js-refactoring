@@ -53,9 +53,7 @@ function isDesktopWindowScrollHandlerEnabled() {
 }
 
 function initDesktopWindowScrollHandler() {
-    $(window).scroll(() => {
-        onDesktopWindowScroll();
-    });
+    $(window).scroll(onDesktopWindowScroll);
 }
 
 /**
@@ -136,7 +134,5 @@ function initMobileFilters() {
 export default function initNavigation() {
     initFiltersDropdowns();
 
-    $(() => {
-        initOnDocumentReady();
-    });
+    $(initOnDocumentReady);
 }
