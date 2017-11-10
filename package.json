@@ -1,0 +1,32 @@
+{
+  "name": "plain-js-refactoring",
+  "version": "0.0.1",
+  "description": "This repository is an example repository about refactoring a piece of plain JS into a structured and testable system of files and components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonpkazakov/plain-js-refactoring.git"
+  },
+  "keywords": [
+    "javascript",
+    "refactoring",
+    "js",
+    "plain",
+    "oop",
+    "functional"
+  ],
+  "author": "Anton Kazakov <anton.kazakov@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antonpkazakov/plain-js-refactoring/issues"
+  },
+  "homepage": "https://github.com/antonpkazakov/plain-js-refactoring#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "sinon": "^4.1.2"
+  }
+}
