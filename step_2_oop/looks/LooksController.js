@@ -1,11 +1,11 @@
 // import modules
-import ModuleSmoothScroll from './local/modules/SmoothScroll';
-import WelcomeOverlay from './block/welcomeOverlay';
-import * as ClubSignupOverlay from './block/clubSignupOverlay';
+import ModuleSmoothScroll from '../_dummy_modules/SmoothScroll';
+import WelcomeOverlay from '../_dummy_modules/WelcomeOverlay';
+import * as ClubSignupOverlay from '../_dummy_modules/ClubSignupOverlay';
 
 import Seo from './blocks/Seo';
 
-import Navigation from '/blocks/Navigation';
+import Navigation from './blocks/Navigation';
 import Ldp from './blocks/Ldp';
 import LdpProducts from './blocks/LdpProducts';
 import Wishlist from './blocks/Wishlist';
@@ -14,7 +14,9 @@ export default class LooksController {
     initOnDocumentReady() {
         this.initLazyloading();
 
-        this.initSmoothScrolling();
+        if (this.isSmoothScrollingEnabled()) {
+            this.initSmoothScrolling();
+        }
     }
 
     initLazyloading() {
@@ -34,10 +36,6 @@ export default class LooksController {
     }
 
     initSmoothScrolling() {
-        if (!this.isSmoothScrollingEnabled()) {
-            return;
-        }
-
         const smoothScroll = new ModuleSmoothScroll();
         smoothScroll.init();
     }

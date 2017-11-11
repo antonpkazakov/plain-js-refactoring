@@ -1,8 +1,8 @@
-import Sharing from './block/sharing';
-import AddToCartLookTracking from './local/modules/GTM/AddToCartLookTracking';
-import AddToCartHotspot from './local/modules/AddToCartHotspot';
-import PlpTracking from './local/modules/GTM/PlpTracking';
-import ModuleProductChangeSimples from './local/modules/ProductChangeSimples';
+import Sharing from '../../_dummy_modules/Sharing';
+import AddToCartLookTracking from '../../_dummy_modules/AddToCartLookTracking';
+import AddToCartHotspot from '../../_dummy_modules/AddToCartHotspot';
+import PlpTracking from '../../_dummy_modules/PlpTracking';
+import ProductChangeSimples from '../../_dummy_modules/ProductChangeSimples';
 
 export default class LdpProducts {
     constructor() {
@@ -40,7 +40,7 @@ export default class LdpProducts {
     }
 
     initProductSimplesSelectOnHotspots() {
-        const productChangeSimples = new ModuleProductChangeSimples();
+        const productChangeSimples = new ProductChangeSimples();
         productChangeSimples.init();
     }
 
@@ -93,14 +93,18 @@ export default class LdpProducts {
         });
     }
 
+    initGiftItemAlternatives() {
+        this.$ldpGiftItemsAlternatives.hover((e) => {
+            $(e.currentTarget).parent().find('a.alternative, .original-image, .alternative-image, .cl__list__item__alternative').toggleClass('active');
+        });
+    }
+
     initGiftIcons() {
         if (this.isGiftIconsTouchEventsHandlingNeeded()) {
             this.initGiftIconsTouchEvents();
         }
 
-        this.$ldpGiftItemsAlternatives.hover((e) => {
-            $(e.currentTarget).parent().find('a.alternative, .original-image, .alternative-image, .cl__list__item__alternative').toggleClass('active');
-        });
+        this.initGiftItemAlternatives();
     }
 
     removeProductImagesLoaders() {

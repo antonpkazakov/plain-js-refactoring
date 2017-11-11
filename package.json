@@ -4,7 +4,7 @@
   "description": "This repository is an example repository about refactoring a piece of plain JS into a structured and testable system of files and components.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "find ./step_2_oop -name '*.test.js' | xargs ./node_modules/.bin/mocha --compilers js:babel/register --no-deprecation"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,10 @@
   },
   "homepage": "https://github.com/antonpkazakov/plain-js-refactoring#readme",
   "devDependencies": {
+    "babel": "^5.8.38",
     "chai": "^4.1.2",
+    "jquery": "^2.2.0",
+    "jsdom": "^11.3.0",
     "mocha": "^4.0.1",
     "sinon": "^4.1.2"
   }

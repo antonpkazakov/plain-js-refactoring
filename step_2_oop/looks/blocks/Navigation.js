@@ -1,4 +1,4 @@
-import ModuleCustomDropdowns from './local/modules/CustomDropdowns';
+import CustomDropdowns from '../../_dummy_modules/CustomDropdowns';
 
 export default class Navigation {
     constructor() {
@@ -40,7 +40,7 @@ export default class Navigation {
     }
 
     initFiltersDropdowns() {
-        const customDropdowns = new ModuleCustomDropdowns();
+        const customDropdowns = new CustomDropdowns();
         customDropdowns.init();
     }
 
@@ -74,8 +74,15 @@ export default class Navigation {
         }
     }
 
+    /**
+     * @return {Number}
+     */
+    getWindowScrollTop() {
+        return $(window).scrollTop();
+    }
+
     onDesktopWindowScroll() {
-        const height = $(window).scrollTop();
+        const height = this.getWindowScrollTop();
 
         switch (true) {
             case height > 212:
@@ -94,12 +101,17 @@ export default class Navigation {
     }
 
     /**
+     * @return {string}
+     */
+    getLocationPathname() {
+        return window.location.pathname;
+    }
+
+    /**
      * @return {boolean}
      */
     isLooksLogoFilterEnabled() {
-        const pathname = window.location.pathname;
-
-        return pathname === '/looks/' || pathname === '/styleguide-preview/pages/page-looks-main.html';
+        return this.getLocationPathname() === '/looks/' || this.getLocationPathname() === '/styleguide-preview/pages/page-looks-main.html';
     }
 
     /**
@@ -121,14 +133,18 @@ export default class Navigation {
         this.$mobileLogoFiltersLookup.before(this.renderLooksLogoFilter());
     }
 
+    initLooksLogo() {
+        this.getLooksLogoFilter().on('click', () => {
+            this.$mobileLogoFiltersShowNode.show();
+            this.$page.addClass(this.plpBodyFixedClass);
+        });
+    }
+
     initMobileFilters() {
         if (this.isLooksLogoFilterEnabled()) {
             this.addLooksLogo();
         }
 
-        this.getLooksLogoFilter().on('click', () => {
-            this.$mobileLogoFiltersShowNode.show();
-            this.$page.addClass(this.plpBodyFixedClass);
-        });
+        this.initLooksLogo();
     }
 }

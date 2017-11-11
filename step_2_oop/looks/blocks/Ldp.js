@@ -1,11 +1,13 @@
-import SlickSlider from './block/slickSlider';
-import LookPano from './block/lookPano';
+import SlickSlider from '../../_dummy_modules/SlickSlider';
+import LookPano from '../../_dummy_modules/LookPano';
 
 export default class Ldp {
     init() {
         this.initLookMainImagePano();
 
-        this.initBottomLooksSlider();
+        $(() => {
+            this.initOnDocumentReady();
+        });
     }
 
     initLookMainImagePano() {
@@ -13,10 +15,12 @@ export default class Ldp {
         lookPano.init();
     }
 
+    initOnDocumentReady() {
+        this.initBottomLooksSlider();
+    }
+
     initBottomLooksSlider() {
         const slickSlider = new SlickSlider();
-        $(function () {
-            slickSlider.init();
-        });
+        slickSlider.init();
     }
 }

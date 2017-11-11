@@ -1,4 +1,4 @@
-import Wishlist20 from './../../block/Wishlist20';
+import Wishlist20 from '../../_dummy_modules/Wishlist20';
 
 export default class Wishlist {
     constructor() {
