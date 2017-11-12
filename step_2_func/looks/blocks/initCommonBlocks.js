@@ -1,6 +1,6 @@
-import ModuleSmoothScroll from './local/modules/SmoothScroll';
-import WelcomeOverlay from './block/welcomeOverlay';
-import * as ClubSignupOverlay from './block/clubSignupOverlay';
+import SmoothScroll from '../../_dummy_modules/SmoothScroll';
+import WelcomeOverlay from '../../_dummy_modules/WelcomeOverlay';
+import * as ClubSignupOverlay from '../../_dummy_modules/ClubSignupOverlay';
 
 import initSeo from './initSeo';
 
@@ -24,7 +24,7 @@ function isSmoothScrollingEnabled() {
 }
 
 function initSmoothScrolling() {
-    const smoothScroll = new ModuleSmoothScroll();
+    const smoothScroll = new SmoothScroll();
     smoothScroll.init();
 }
 

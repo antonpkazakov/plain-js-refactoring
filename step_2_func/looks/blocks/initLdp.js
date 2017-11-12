@@ -1,5 +1,5 @@
-import SlickSlider from './block/slickSlider';
-import LookPano from './block/lookPano';
+import SlickSlider from '../../_dummy_modules/SlickSlider';
+import LookPano from '../../_dummy_modules/LookPano';
 
 function initLookMainImagePano() {
     const lookPano = new LookPano();

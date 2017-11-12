@@ -42,7 +42,7 @@ export default class Seo {
     }
 
     initSeoBox() {
-        if (!this.$seoBox.length) {
+        if (!this.$seoBox || !this.$seoBox.length) {
             return;
         }
 
@@ -60,7 +60,7 @@ export default class Seo {
     }
 
     initSeoText() {
-        if (!this.$looksMainSeoText.length) {
+        if (!this.$looksMainSeoText || !this.$looksMainSeoText.length) {
             return;
         }
 

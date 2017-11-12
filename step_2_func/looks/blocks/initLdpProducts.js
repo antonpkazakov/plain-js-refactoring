@@ -1,8 +1,8 @@
-import Sharing from './block/sharing';
-import AddToCartLookTracking from './local/modules/GTM/AddToCartLookTracking';
-import AddToCartHotspot from './local/modules/AddToCartHotspot';
-import PlpTracking from './local/modules/GTM/PlpTracking';
-import ModuleProductChangeSimples from './local/modules/ProductChangeSimples';
+import Sharing from '../../_dummy_modules/Sharing';
+import AddToCartLookTracking from '../../_dummy_modules/AddToCartLookTracking';
+import AddToCartHotspot from '../../_dummy_modules/AddToCartHotspot';
+import PlpTracking from '../../_dummy_modules/PlpTracking';
+import ProductChangeSimples from '../../_dummy_modules/ProductChangeSimples';
 
 const $ldpGiftItemsIcons = $('.cl__list__item__gift__giftIcon');
 const $ldpGiftItemsAlternatives = $('.cl__list__item__gift.alternative');
@@ -24,7 +24,7 @@ function initOnWindowLoad() {
 }
 
 function initProductSimplesSelectOnHotspots() {
-    const productChangeSimples = new ModuleProductChangeSimples();
+    const productChangeSimples = new ProductChangeSimples();
     productChangeSimples.init();
 }
 

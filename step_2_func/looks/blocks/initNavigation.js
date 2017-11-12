@@ -1,4 +1,4 @@
-import ModuleCustomDropdowns from './local/modules/CustomDropdowns';
+import CustomDropdowns from '../../_dummy_modules/CustomDropdowns';
 
 const $stickyNav = $('.sticky');
 
@@ -41,7 +41,7 @@ function initOnDocumentReady() {
 }
 
 function initFiltersDropdowns() {
-    const customDropdowns = new ModuleCustomDropdowns();
+    const customDropdowns = new CustomDropdowns();
     customDropdowns.init();
 }
 

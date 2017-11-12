@@ -13,10 +13,9 @@ function getSeoBlockMock() {
 
     sinon.stub(seoBlock, 'isEnabled').callsFake(() => true);
 
-    sinon.stub(seoBlock, 'initSeoBox').callsFake(() => {});
-    sinon.stub(seoBlock, 'initSeoText').callsFake(() => {});
-
     sinon.spy(seoBlock, 'bindDocumentReady');
+    sinon.spy(seoBlock, 'initSeoBox');
+    sinon.spy(seoBlock, 'initSeoText');
 
     return seoBlock;
 }
