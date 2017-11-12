@@ -16,7 +16,7 @@ The `step_1` folder contains a "pseudo OOP" implementation of the blocks. It's s
 
 ## Step 2 (Functional)
 
-The `step_2_func` folder contains a functional implementation of the same page with tests and properly structured functional modules. Testing it is pain because of the way NodeJS exposes the contents of the module. Even the exposed function aren't that easily mocked and spied. Therefore, testing is possible, but to a very limited extent.
+The `step_2_func` folder contains a functional implementation of the same page with tests and properly structured functional modules. Testing this is pain. Because of the way NodeJS exposes the contents of the module, even the exposed function aren't that easily mocked and spied. Therefore, testing is possible, but to a very limited extent or with a lot of tests only related additional code.
 
 ## Step 2 (OOP)
 
